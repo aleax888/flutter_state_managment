@@ -24,7 +24,6 @@ class CounterBloc extends Bloc<CounterEvent, CounterState> {
     CounterIncrementPressed event,
     Emitter<CounterState> emit,
   ) {
-    emit(CounterLoadInProgress());
     _counter++;
     emit(CounterLoadSuccess(counter: _counter));
   }
@@ -33,7 +32,6 @@ class CounterBloc extends Bloc<CounterEvent, CounterState> {
     CounterDecrementPressed event,
     Emitter<CounterState> emit,
   ) {
-    emit(CounterLoadInProgress());
     _counter--;
     emit(CounterLoadSuccess(counter: _counter));
   }

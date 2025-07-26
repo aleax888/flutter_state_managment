@@ -16,8 +16,6 @@ class BlocPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return SamplePage(
       title: "BLoC",
-
-      // counter view
       counter: BlocBuilder<CounterBloc, CounterState>(
         builder: (context, state) {
           if (state is CounterLoadSuccess) {
@@ -29,9 +27,7 @@ class BlocPage extends StatelessWidget {
           }
         },
       ),
-
-      // go to twin page
-      goToTwin: () {
+      goToTwinPage: () {
         final bloc = BlocProvider.of<CounterBloc>(context);
         Navigator.push(
           context,
@@ -41,12 +37,8 @@ class BlocPage extends StatelessWidget {
           ),
         );
       },
-
-      // counter increment
       increment: () =>
           BlocProvider.of<CounterBloc>(context).add(CounterIncrementPressed()),
-
-      // counter decrement
       decrement: () =>
           BlocProvider.of<CounterBloc>(context).add(CounterDecrementPressed()),
     );

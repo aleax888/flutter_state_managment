@@ -9,14 +9,14 @@ import 'package:flutter_state_managment/components/custom_page.dart';
 class SamplePage extends StatelessWidget {
   final String title;
   final Widget counter;
-  final Function() goToTwin;
+  final Function() goToTwinPage;
   final Function() increment;
   final Function() decrement;
   const SamplePage({
     super.key,
     required this.title,
     required this.counter,
-    required this.goToTwin,
+    required this.goToTwinPage,
     required this.increment,
     required this.decrement,
   });
@@ -36,14 +36,14 @@ class SamplePage extends StatelessWidget {
         ],
       ),
       children: [
-        // counter
+        // counter view
         counter,
 
         // go to twin page
         CustomButton(
           label: "Go to Twin",
           color: Colors.green,
-          onPressed: goToTwin,
+          onPressed: goToTwinPage,
         ),
       ],
     );

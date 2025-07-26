@@ -1,20 +1,15 @@
 // fluttter
 import 'package:flutter/material.dart';
 
-// components
-import 'package:flutter_state_managment/components/action_button.dart';
-
 class CustomPage extends StatelessWidget {
   final String title;
   final List<Widget> children;
-  final Function()? increment;
-  final Function()? decrement;
+  final Widget? floatingActionButton;
   const CustomPage({
     super.key,
     required this.title,
     required this.children,
-    this.increment,
-    this.decrement,
+    this.floatingActionButton,
   });
 
   @override
@@ -26,15 +21,7 @@ class CustomPage extends StatelessWidget {
         child: Center(child: Column(children: children)),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
-      floatingActionButton: Column(
-        mainAxisSize: MainAxisSize.min,
-        children: [
-          if (increment != null)
-            ActionButton(action: increment!, icon: Icons.add),
-          if (decrement != null)
-            ActionButton(action: decrement!, icon: Icons.remove),
-        ],
-      ),
+      floatingActionButton: floatingActionButton,
     );
   }
 }

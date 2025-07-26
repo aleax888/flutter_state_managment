@@ -1,0 +1,27 @@
+// BLoC
+import 'package:bloc/bloc.dart';
+import 'package:meta/meta.dart';
+
+// BLoC parts
+part 'counter_state.dart';
+
+class CounterCubit extends Cubit<CounterState> {
+  CounterCubit() : super(CounterInitial());
+
+  late int _counter;
+
+  void counterStarted() {
+    _counter = 0;
+    emit(CounterLoadSuccess(counter: _counter));
+  }
+
+  void increment() {
+    _counter++;
+    emit(CounterLoadSuccess(counter: _counter));
+  }
+
+  void decrement() {
+    _counter--;
+    emit(CounterLoadSuccess(counter: _counter - 1));
+  }
+}

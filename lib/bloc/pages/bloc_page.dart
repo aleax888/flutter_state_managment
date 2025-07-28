@@ -10,12 +10,13 @@ import 'package:flutter_state_managment/bloc/counter_bloc/counter_bloc.dart';
 import 'package:flutter_state_managment/components/sample_page.dart';
 
 class BlocPage extends StatelessWidget {
+  final String title = "BLoC";
   const BlocPage({super.key});
 
   @override
   Widget build(BuildContext context) {
     return SamplePage(
-      title: "BLoC",
+      title: title,
       counter: BlocBuilder<CounterBloc, CounterState>(
         builder: (context, state) {
           if (state is CounterLoadSuccess) {
@@ -32,8 +33,10 @@ class BlocPage extends StatelessWidget {
         Navigator.push(
           context,
           MaterialPageRoute(
-            builder: (context) =>
-                BlocProvider.value(value: bloc, child: BlocTwinPage()),
+            builder: (context) => BlocProvider.value(
+              value: bloc,
+              child: BlocTwinPage(title: title),
+            ),
           ),
         );
       },

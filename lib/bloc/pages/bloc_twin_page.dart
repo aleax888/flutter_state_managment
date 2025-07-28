@@ -6,28 +6,31 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_state_managment/bloc/counter_bloc/counter_bloc.dart';
 
 // components
-import 'package:flutter_state_managment/components/custom_page.dart';
+import 'package:flutter_state_managment/components/twin_page.dart';
 
 class BlocTwinPage extends StatelessWidget {
-  const BlocTwinPage({super.key});
+  final String title;
+  const BlocTwinPage({super.key, required this.title});
 
   @override
   Widget build(BuildContext context) {
-    return CustomPage(
-      title: "BLoC (Twin)",
-      children: [
-        BlocBuilder<CounterBloc, CounterState>(
-          builder: (context, state) {
-            if (state is CounterLoadSuccess) {
-              return Text(state.counter.toString());
-            } else if (state is CounterLoadInProgress) {
-              return Center(child: CircularProgressIndicator());
-            } else {
-              return Container();
-            }
-          },
-        ),
-      ],
+    return TwinPage(
+      title: title,
+      counter: BlocBuilder<CounterBloc, CounterState>(
+        builder: (context, state) {
+          if (state is CounterLoadSuccess) {
+            return Text(state.counter.toString());
+          } else if (state is CounterLoadInProgress) {
+            return Center(child: CircularProgressIndicator());
+          } else {
+            return Container();
+          }
+        },
+      ),
+      increment: () =>
+          BlocProvider.of<CounterBloc>(context).add(CounterIncrementPressed()),
+      decrement: () =>
+          BlocProvider.of<CounterBloc>(context).add(CounterDecrementPressed()),
     );
   }
 }

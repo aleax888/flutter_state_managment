@@ -10,12 +10,13 @@ import 'package:flutter_state_managment/components/sample_page.dart';
 import 'package:flutter_state_managment/cubit/pages/cubit_twin_page.dart';
 
 class CubitPage extends StatelessWidget {
+  final String title = "Cubit";
   const CubitPage({super.key});
 
   @override
   Widget build(BuildContext context) {
     return SamplePage(
-      title: "Cubit",
+      title: title,
       counter: BlocBuilder<CounterCubit, CounterState>(
         builder: (context, state) {
           if (state is CounterLoadSuccess) {
@@ -32,8 +33,10 @@ class CubitPage extends StatelessWidget {
         Navigator.push(
           context,
           MaterialPageRoute(
-            builder: (context) =>
-                BlocProvider.value(value: bloc, child: CubitTwinPage()),
+            builder: (context) => BlocProvider.value(
+              value: bloc,
+              child: CubitTwinPage(title: title),
+            ),
           ),
         );
       },

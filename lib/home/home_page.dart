@@ -6,13 +6,14 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_state_managment/bloc/counter_bloc/counter_bloc.dart';
 import 'package:flutter_state_managment/cubit/counter_cubit.dart';
 
-//components
+// components
 import 'package:flutter_state_managment/components/custom_page.dart';
 import 'package:flutter_state_managment/components/custom_button.dart';
 
 // pages
 import 'package:flutter_state_managment/bloc/pages/bloc_page.dart';
 import 'package:flutter_state_managment/cubit/pages/cubit_page.dart';
+import 'package:flutter_state_managment/flutter_set_state/flutter_set_state_page.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -57,10 +58,22 @@ class HomePage extends StatelessWidget {
                 );
               },
             ),
+
+            // Flutter Set State
             CustomButton(
               label: 'Fluttter Set State',
               color: Colors.blue,
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => BlocProvider(
+                      create: (context) => CounterCubit()..counterStarted(),
+                      child: FlutterSetStatePage(),
+                    ),
+                  ),
+                );
+              },
             ),
             CustomButton(
               label: 'Fluttter Inherited Widget',

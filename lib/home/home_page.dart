@@ -14,6 +14,8 @@ import 'package:flutter_state_managment/components/custom_button.dart';
 import 'package:flutter_state_managment/bloc/pages/bloc_page.dart';
 import 'package:flutter_state_managment/cubit/pages/cubit_page.dart';
 import 'package:flutter_state_managment/flutter_set_state/flutter_set_state_page.dart';
+import 'package:flutter_state_managment/getx_reactive_state/pages/getx_reactive_state_page.dart';
+import 'package:flutter_state_managment/getx_simple_state/pages/getx_simple_state_page.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -80,15 +82,33 @@ class HomePage extends StatelessWidget {
               color: Colors.blue,
               onPressed: () {},
             ),
+
+            // Get X Reactive State
             CustomButton(
-              label: 'GetX Get Controller',
+              label: 'GetX Reactive State',
               color: Colors.blue,
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => GetXReactiveStatePage(),
+                  ),
+                );
+              },
             ),
+
+            // Get X Simple State
             CustomButton(
-              label: 'GetX Rx',
+              label: 'GetX Simple State',
               color: Colors.blue,
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => GetXSimpleStatePage(),
+                  ),
+                );
+              },
             ),
             CustomButton(
               label: 'Provider',

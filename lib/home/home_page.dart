@@ -14,7 +14,7 @@ import 'package:flutter_state_managment/components/custom_button.dart';
 import 'package:flutter_state_managment/bloc/pages/bloc_page.dart';
 import 'package:flutter_state_managment/cubit/pages/cubit_page.dart';
 import 'package:flutter_state_managment/flutter_set_state/flutter_set_state_page.dart';
-import 'package:flutter_state_managment/getx_mixin_state/pages/getx_simple_state_page.dart';
+import 'package:flutter_state_managment/getx_mixin_state/pages/getx_mixin_state_page.dart';
 import 'package:flutter_state_managment/getx_reactive_state/pages/getx_reactive_state_page.dart';
 import 'package:flutter_state_managment/getx_simple_state/pages/getx_simple_state_page.dart';
 

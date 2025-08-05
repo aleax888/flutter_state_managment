@@ -1,0 +1,30 @@
+// flutter
+import 'package:flutter/material.dart';
+
+// components
+import 'package:flutter_state_managment/components/twin_page.dart';
+
+// GetX
+import 'package:get/get.dart';
+import 'package:flutter_state_managment/getx_mixin_state/counter_controller/counter_controller.dart';
+
+class GetXMixinStateTwinPage extends StatelessWidget {
+  final String title;
+  final CounterController _counterController = Get.find<CounterController>();
+  GetXMixinStateTwinPage({super.key, required this.title});
+
+  @override
+  Widget build(BuildContext context) {
+    return TwinPage(
+      title: title,
+      counter: _counterController.obx(
+        (state) => Text(state.toString()),
+        onLoading: CircularProgressIndicator(),
+        onEmpty: Text('No data found'),
+        onError: (error) => Text(error ?? ""),
+      ),
+      increment: _counterController.increment,
+      decrement: _counterController.decrement,
+    );
+  }
+}

@@ -13,6 +13,7 @@ import 'package:flutter_state_managment/components/custom_button.dart';
 // pages
 import 'package:flutter_state_managment/bloc/pages/bloc_page.dart';
 import 'package:flutter_state_managment/cubit/pages/cubit_page.dart';
+import 'package:flutter_state_managment/flutter_inherited_widget/pages/flutter_inherited_widget_page.dart';
 import 'package:flutter_state_managment/flutter_set_state/flutter_set_state_page.dart';
 import 'package:flutter_state_managment/getx_mixin_state/pages/getx_mixin_state_page.dart';
 import 'package:flutter_state_managment/getx_reactive_state/pages/getx_reactive_state_page.dart';
@@ -78,10 +79,19 @@ class HomePage extends StatelessWidget {
                 );
               },
             ),
+
+            // Flutter Inherited Widget
             CustomButton(
               label: 'Fluttter Inherited Widget',
               color: Colors.blue,
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => FlutterInheritedWidgetPage(),
+                  ),
+                );
+              },
             ),
 
             // Get X Reactive State
@@ -111,7 +121,7 @@ class HomePage extends StatelessWidget {
                 );
               },
             ),
-            
+
             // Get X Mixin State
             CustomButton(
               label: 'GetX Mixin State',
@@ -119,9 +129,7 @@ class HomePage extends StatelessWidget {
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(
-                    builder: (context) => GetXMixinStatePage(),
-                  ),
+                  MaterialPageRoute(builder: (context) => GetXMixinStatePage()),
                 );
               },
             ),

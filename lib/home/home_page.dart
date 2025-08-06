@@ -6,6 +6,10 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_state_managment/bloc/counter_bloc/counter_bloc.dart';
 import 'package:flutter_state_managment/cubit/counter_cubit.dart';
 
+// provider
+import 'package:provider/provider.dart';
+import 'package:flutter_state_managment/provider/counter_provider/counter_provider.dart';
+
 // components
 import 'package:flutter_state_managment/components/custom_page.dart';
 import 'package:flutter_state_managment/components/custom_button.dart';
@@ -18,6 +22,7 @@ import 'package:flutter_state_managment/flutter_set_state/flutter_set_state_page
 import 'package:flutter_state_managment/getx_mixin_state/pages/getx_mixin_state_page.dart';
 import 'package:flutter_state_managment/getx_reactive_state/pages/getx_reactive_state_page.dart';
 import 'package:flutter_state_managment/getx_simple_state/pages/getx_simple_state_page.dart';
+import 'package:flutter_state_managment/provider/pages/provider_page.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -133,10 +138,22 @@ class HomePage extends StatelessWidget {
                 );
               },
             ),
+
+            // Provider
             CustomButton(
               label: 'Provider',
               color: Colors.blue,
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => ChangeNotifierProvider(
+                      create: (_) => CounterProvider(),
+                      child: ProviderPage(),
+                    ),
+                  ),
+                );
+              },
             ),
             CustomButton(
               label: 'Riverpod',

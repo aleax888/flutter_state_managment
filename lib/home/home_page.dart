@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_state_managment/bloc/counter_bloc/counter_bloc.dart';
 import 'package:flutter_state_managment/cubit/counter_cubit.dart';
+import 'package:flutter_state_managment/riverpod/pages/riverpod_page.dart';
 
 // provider
 import 'package:provider/provider.dart';
@@ -155,10 +156,17 @@ class HomePage extends StatelessWidget {
                 );
               },
             ),
+
+            // Riverpod
             CustomButton(
               label: 'Riverpod',
               color: Colors.blue,
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => RiverpodPage()),
+                );
+              },
             ),
           ],
         ),

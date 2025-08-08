@@ -69,37 +69,6 @@ class HomePage extends StatelessWidget {
               },
             ),
 
-            // Flutter Set State
-            CustomButton(
-              label: 'Fluttter Set State',
-              color: Colors.blue,
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => BlocProvider(
-                      create: (context) => CounterCubit()..counterStarted(),
-                      child: FlutterSetStatePage(),
-                    ),
-                  ),
-                );
-              },
-            ),
-
-            // Flutter Inherited Widget
-            CustomButton(
-              label: 'Fluttter Inherited Widget',
-              color: Colors.blue,
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => FlutterInheritedWidgetPage(),
-                  ),
-                );
-              },
-            ),
-
             // Get X Reactive State
             CustomButton(
               label: 'GetX Reactive State',
@@ -136,6 +105,37 @@ class HomePage extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => GetXMixinStatePage()),
+                );
+              },
+            ),
+
+            // Flutter Set State
+            CustomButton(
+              label: 'Fluttter Set State',
+              color: Colors.blue,
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => BlocProvider(
+                      create: (context) => CounterCubit()..counterStarted(),
+                      child: FlutterSetStatePage(),
+                    ),
+                  ),
+                );
+              },
+            ),
+
+            // Flutter Inherited Widget
+            CustomButton(
+              label: 'Fluttter Inherited Widget',
+              color: Colors.blue,
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => FlutterInheritedWidgetPage(),
+                  ),
                 );
               },
             ),

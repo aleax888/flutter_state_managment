@@ -2,7 +2,7 @@
 import 'package:flutter/material.dart';
 
 // inherited widget
-import 'package:flutter_state_managment/flutter_inherited_widget/inherited_widget/counter_state_container.dart';
+import 'package:flutter_state_managment/samples/flutter_inherited_widget/inherited_widget/counter_state_container.dart';
 
 // riveerpod
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -28,3 +28,4 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+

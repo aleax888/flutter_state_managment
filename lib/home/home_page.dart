@@ -3,27 +3,27 @@ import 'package:flutter/material.dart';
 
 // BLoC
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_state_managment/bloc/counter_bloc/counter_bloc.dart';
-import 'package:flutter_state_managment/cubit/counter_cubit.dart';
-import 'package:flutter_state_managment/riverpod/pages/riverpod_page.dart';
+import 'package:flutter_state_managment/samples/bloc/counter_bloc/counter_bloc.dart';
+import 'package:flutter_state_managment/samples/cubit/counter_cubit/counter_cubit.dart';
 
 // provider
 import 'package:provider/provider.dart';
-import 'package:flutter_state_managment/provider/counter_provider/counter_provider.dart';
+import 'package:flutter_state_managment/samples/provider/counter_provider/counter_provider.dart';
 
 // components
-import 'package:flutter_state_managment/components/custom_page.dart';
-import 'package:flutter_state_managment/components/custom_button.dart';
+import 'package:flutter_state_managment/shared/widgets/custom_page.dart';
+import 'package:flutter_state_managment/shared/widgets/custom_button.dart';
 
 // pages
-import 'package:flutter_state_managment/bloc/pages/bloc_page.dart';
-import 'package:flutter_state_managment/cubit/pages/cubit_page.dart';
-import 'package:flutter_state_managment/flutter_inherited_widget/pages/flutter_inherited_widget_page.dart';
-import 'package:flutter_state_managment/flutter_set_state/flutter_set_state_page.dart';
-import 'package:flutter_state_managment/getx_mixin_state/pages/getx_mixin_state_page.dart';
-import 'package:flutter_state_managment/getx_reactive_state/pages/getx_reactive_state_page.dart';
-import 'package:flutter_state_managment/getx_simple_state/pages/getx_simple_state_page.dart';
-import 'package:flutter_state_managment/provider/pages/provider_page.dart';
+import 'package:flutter_state_managment/samples/bloc/pages/bloc_page.dart';
+import 'package:flutter_state_managment/samples/cubit/pages/cubit_page.dart';
+import 'package:flutter_state_managment/samples/flutter_inherited_widget/pages/flutter_inherited_widget_page.dart';
+import 'package:flutter_state_managment/samples/flutter_set_state/flutter_set_state_page.dart';
+import 'package:flutter_state_managment/samples/getx_mixin_state/pages/getx_mixin_state_page.dart';
+import 'package:flutter_state_managment/samples/getx_reactive_state/pages/getx_reactive_state_page.dart';
+import 'package:flutter_state_managment/samples/getx_simple_state/pages/getx_simple_state_page.dart';
+import 'package:flutter_state_managment/samples/provider/pages/provider_page.dart';
+import 'package:flutter_state_managment/samples/riverpod/pages/riverpod_page.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});

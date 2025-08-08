@@ -7,6 +7,7 @@ import 'package:flutter_state_managment/samples/provider/counter_provider/counte
 
 // components
 import 'package:flutter_state_managment/shared/widgets/sample_page.dart';
+import 'package:flutter_state_managment/shared/widgets/counter_text.dart';
 
 // pages
 import 'package:flutter_state_managment/samples/provider/pages/provider_twin_page.dart';
@@ -19,7 +20,7 @@ class ProviderPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return SamplePage(
       title: title,
-      counter: Text(context.watch<CounterProvider>().counter.toString()),
+      counter: CounterText(counter: context.watch<CounterProvider>().counter),
       goToTwinPage: () {
         final provider = context.read<CounterProvider>();
         return Navigator.push(

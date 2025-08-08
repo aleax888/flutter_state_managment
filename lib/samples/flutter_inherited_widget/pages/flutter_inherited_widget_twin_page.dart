@@ -6,6 +6,7 @@ import 'package:flutter_state_managment/samples/flutter_inherited_widget/inherit
 
 // components
 import 'package:flutter_state_managment/shared/widgets/twin_page.dart';
+import 'package:flutter_state_managment/shared/widgets/counter_text.dart';
 
 class FlutterInheritedWidgetTwinPage extends StatelessWidget {
   final String title;
@@ -15,7 +16,7 @@ class FlutterInheritedWidgetTwinPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return TwinPage(
       title: title,
-      counter: Text(CounterInheritedWidget.of(context).counter.toString()),
+      counter: CounterText(counter: CounterInheritedWidget.of(context).counter),
       increment: CounterInheritedWidget.of(context).increment,
       decrement: CounterInheritedWidget.of(context).decrement,
     );

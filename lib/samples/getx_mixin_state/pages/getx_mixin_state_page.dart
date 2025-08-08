@@ -7,6 +7,7 @@ import 'package:flutter_state_managment/samples/getx_mixin_state/counter_control
 
 // components
 import 'package:flutter_state_managment/shared/widgets/sample_page.dart';
+import 'package:flutter_state_managment/shared/widgets/counter_text.dart';
 
 // pages
 import 'package:flutter_state_managment/samples/getx_mixin_state/pages/getx_mixin_state_twin_page.dart';
@@ -41,7 +42,7 @@ class _GetXMixinStatePageState extends State<GetXMixinStatePage> {
     return SamplePage(
       title: _title,
       counter: _counterController.obx(
-        (state) => Text(state.toString()),
+        (state) => CounterText(counter: state ?? 0),
         onLoading: CircularProgressIndicator(),
         onEmpty: Text('No data found'),
         onError: (error) => Text(error ?? ""),

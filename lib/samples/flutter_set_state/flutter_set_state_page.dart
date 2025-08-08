@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 
 // components
 import 'package:flutter_state_managment/shared/widgets/sample_page.dart';
+import 'package:flutter_state_managment/shared/widgets/counter_text.dart';
 
 // pages
 import 'package:flutter_state_managment/samples/flutter_set_state/flutter_set_state_twin_page.dart';
@@ -22,7 +23,7 @@ class _FlutterSetStatePageState extends State<FlutterSetStatePage> {
   Widget build(BuildContext context) {
     return SamplePage(
       title: widget.title,
-      counter: Text(_counter.toString()),
+      counter: CounterText(counter: _counter),
       goToTwinPage: () {
         Navigator.push(
           context,

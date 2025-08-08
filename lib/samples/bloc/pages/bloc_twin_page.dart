@@ -7,6 +7,7 @@ import 'package:flutter_state_managment/samples/bloc/counter_bloc/counter_bloc.d
 
 // components
 import 'package:flutter_state_managment/shared/widgets/twin_page.dart';
+import 'package:flutter_state_managment/shared/widgets/counter_text.dart';
 
 class BlocTwinPage extends StatelessWidget {
   final String title;
@@ -19,7 +20,7 @@ class BlocTwinPage extends StatelessWidget {
       counter: BlocBuilder<CounterBloc, CounterState>(
         builder: (context, state) {
           if (state is CounterLoadSuccess) {
-            return Text(state.counter.toString());
+            return CounterText(counter: state.counter);
           } else if (state is CounterLoadInProgress) {
             return Center(child: CircularProgressIndicator());
           } else {

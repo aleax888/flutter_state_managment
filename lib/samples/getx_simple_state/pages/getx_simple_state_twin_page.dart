@@ -7,6 +7,7 @@ import 'package:flutter_state_managment/samples/getx_simple_state/counter_contro
 
 // components
 import 'package:flutter_state_managment/shared/widgets/twin_page.dart';
+import 'package:flutter_state_managment/shared/widgets/counter_text.dart';
 
 class GetXSimpleStateTwinPage extends StatelessWidget {
   final String title;
@@ -18,7 +19,7 @@ class GetXSimpleStateTwinPage extends StatelessWidget {
     return TwinPage(
       title: title,
       counter: GetBuilder<CounterController>(
-        builder: (counterController) => Text('${counterController.counter}'),
+        builder: (counterController) => CounterText(counter: counterController.counter.value),
       ),
       increment: _counterController.increment,
       decrement: _counterController.decrement,

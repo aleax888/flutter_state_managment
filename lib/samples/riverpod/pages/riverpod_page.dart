@@ -7,6 +7,7 @@ import 'package:flutter_state_managment/samples/riverpod/counter_provider/counte
 
 // components
 import 'package:flutter_state_managment/shared/widgets/sample_page.dart';
+import 'package:flutter_state_managment/shared/widgets/counter_text.dart';
 
 // pages
 import 'package:flutter_state_managment/samples/riverpod/pages/riverpod_twin_page.dart';
@@ -19,7 +20,7 @@ class RiverpodPage extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     return SamplePage(
       title: title,
-      counter: Text(ref.watch(counterProvider).toString()),
+      counter: CounterText(counter: ref.watch(counterProvider)),
       goToTwinPage: () => Navigator.push(
         context,
         MaterialPageRoute(builder: (context) => RiverpodTwinPage(title: title)),

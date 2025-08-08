@@ -7,6 +7,7 @@ import 'package:flutter_state_managment/samples/riverpod/counter_provider/counte
 
 // components
 import 'package:flutter_state_managment/shared/widgets/twin_page.dart';
+import 'package:flutter_state_managment/shared/widgets/counter_text.dart';
 
 class RiverpodTwinPage extends ConsumerWidget {
   final String title;
@@ -16,7 +17,7 @@ class RiverpodTwinPage extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     return TwinPage(
       title: title,
-      counter: Text(ref.watch(counterProvider).toString()),
+      counter: CounterText(counter: ref.watch(counterProvider)),
       increment: ref.read(counterProvider.notifier).increment,
       decrement: ref.read(counterProvider.notifier).decrement,
     );

@@ -7,6 +7,7 @@ import 'package:flutter_state_managment/samples/getx_simple_state/counter_contro
 
 // components
 import 'package:flutter_state_managment/shared/widgets/sample_page.dart';
+import 'package:flutter_state_managment/shared/widgets/counter_text.dart';
 
 // pages
 import 'package:flutter_state_managment/samples/getx_simple_state/pages/getx_simple_state_twin_page.dart';
@@ -39,7 +40,7 @@ class _GetXSimpleStatePageState extends State<GetXSimpleStatePage> {
     return SamplePage(
       title: _title,
       counter: GetBuilder<CounterController>(
-        builder: (counterController) => Text('${counterController.counter}'),
+        builder: (counterController) => CounterText(counter: counterController.counter.value),
       ),
       goToTwinPage: () => Navigator.push(
         context,

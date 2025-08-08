@@ -6,6 +6,7 @@ import 'package:flutter_state_managment/samples/flutter_inherited_widget/inherit
 
 // components
 import 'package:flutter_state_managment/shared/widgets/sample_page.dart';
+import 'package:flutter_state_managment/shared/widgets/counter_text.dart';
 
 // pages
 import 'package:flutter_state_managment/samples/flutter_inherited_widget/pages/flutter_inherited_widget_twin_page.dart';
@@ -18,7 +19,7 @@ class FlutterInheritedWidgetPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return SamplePage(
       title: title,
-      counter: Text(CounterInheritedWidget.of(context).counter.toString()),
+      counter: CounterText(counter: CounterInheritedWidget.of(context).counter),
       goToTwinPage: () {
         Navigator.push(
           context,

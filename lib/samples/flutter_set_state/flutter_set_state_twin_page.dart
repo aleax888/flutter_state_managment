@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 
 // components
 import 'package:flutter_state_managment/shared/widgets/twin_page.dart';
+import 'package:flutter_state_managment/shared/widgets/counter_text.dart';
 
 class FlutterSetStateTwinPage extends StatefulWidget {
   final String title;
@@ -35,7 +36,7 @@ class _FlutterSetStateTwinPageState extends State<FlutterSetStateTwinPage> {
   Widget build(BuildContext context) {
     return TwinPage(
       title: widget.title,
-      counter: Text(_counter.toString()),
+      counter: CounterText(counter: _counter),
       increment: () => setState(() {
         _counter++;
         widget.increment.call(_counter);

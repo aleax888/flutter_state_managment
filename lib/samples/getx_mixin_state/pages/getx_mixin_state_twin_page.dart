@@ -7,6 +7,7 @@ import 'package:flutter_state_managment/samples/getx_mixin_state/counter_control
 
 // components
 import 'package:flutter_state_managment/shared/widgets/twin_page.dart';
+import 'package:flutter_state_managment/shared/widgets/counter_text.dart';
 
 class GetXMixinStateTwinPage extends StatelessWidget {
   final String title;
@@ -18,7 +19,7 @@ class GetXMixinStateTwinPage extends StatelessWidget {
     return TwinPage(
       title: title,
       counter: _counterController.obx(
-        (state) => Text(state.toString()),
+        (state) => CounterText(counter: state ?? 0),
         onLoading: CircularProgressIndicator(),
         onEmpty: Text('No data found'),
         onError: (error) => Text(error ?? ""),

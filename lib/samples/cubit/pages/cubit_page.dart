@@ -7,6 +7,7 @@ import 'package:flutter_state_managment/samples/cubit/counter_cubit/counter_cubi
 
 // components
 import 'package:flutter_state_managment/shared/widgets/sample_page.dart';
+import 'package:flutter_state_managment/shared/widgets/counter_text.dart';
 
 // pages
 import 'package:flutter_state_managment/samples/cubit/pages/cubit_twin_page.dart';
@@ -22,7 +23,7 @@ class CubitPage extends StatelessWidget {
       counter: BlocBuilder<CounterCubit, CounterState>(
         builder: (context, state) {
           if (state is CounterLoadSuccess) {
-            return Text(state.counter.toString());
+            return CounterText(counter: state.counter);
           } else if (state is CounterLoadInProgress) {
             return Center(child: CircularProgressIndicator());
           } else {

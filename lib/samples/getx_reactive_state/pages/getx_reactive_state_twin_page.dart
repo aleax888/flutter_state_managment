@@ -6,6 +6,7 @@ import 'package:get/get.dart';
 import 'package:flutter_state_managment/samples/getx_reactive_state/counter_controller/counter_controller.dart';
 
 // components
+import 'package:flutter_state_managment/shared/widgets/counter_text.dart';
 import 'package:flutter_state_managment/shared/widgets/twin_page.dart';
 
 class GetXReactiveStateTwinPage extends StatelessWidget {
@@ -18,7 +19,7 @@ class GetXReactiveStateTwinPage extends StatelessWidget {
     return TwinPage(
       title: title,
       counter: GetX<CounterController>(
-        builder: (controller) => Text('${controller.counter}'),
+        builder: (counterController) => CounterText(counter: counterController.counter.value),
       ),
       increment: _counterController.increment,
       decrement: _counterController.decrement,

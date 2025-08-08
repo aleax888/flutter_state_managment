@@ -1,4 +1,7 @@
+// flutter
 import 'package:flutter/material.dart';
+
+// inherited widget
 import 'package:flutter_state_managment/samples/flutter_inherited_widget/inherited_widget/counter_inherited_widget.dart';
 
 class CounterStateContainer extends StatefulWidget {

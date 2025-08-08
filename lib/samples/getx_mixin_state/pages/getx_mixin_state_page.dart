@@ -7,6 +7,8 @@ import 'package:flutter_state_managment/samples/getx_mixin_state/counter_control
 
 // components
 import 'package:flutter_state_managment/shared/widgets/sample_page.dart';
+
+// pages
 import 'package:flutter_state_managment/samples/getx_mixin_state/pages/getx_mixin_state_twin_page.dart';
 
 class GetXMixinStatePage extends StatefulWidget {

@@ -7,6 +7,8 @@ import 'package:flutter_state_managment/samples/getx_reactive_state/counter_cont
 
 // components
 import 'package:flutter_state_managment/shared/widgets/sample_page.dart';
+
+// pages
 import 'package:flutter_state_managment/samples/getx_reactive_state/pages/getx_reactive_state_twin_page.dart';
 
 class GetXReactiveStatePage extends StatefulWidget {

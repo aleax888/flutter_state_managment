@@ -2,7 +2,7 @@
 import 'package:bloc/bloc.dart';
 import 'package:meta/meta.dart';
 
-// BLoC parts
+// cubit parts
 part 'counter_state.dart';
 
 class CounterCubit extends Cubit<CounterState> {

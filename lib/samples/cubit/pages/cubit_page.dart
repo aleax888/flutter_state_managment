@@ -7,6 +7,8 @@ import 'package:flutter_state_managment/samples/cubit/counter_cubit/counter_cubi
 
 // components
 import 'package:flutter_state_managment/shared/widgets/sample_page.dart';
+
+// pages
 import 'package:flutter_state_managment/samples/cubit/pages/cubit_twin_page.dart';
 
 class CubitPage extends StatelessWidget {

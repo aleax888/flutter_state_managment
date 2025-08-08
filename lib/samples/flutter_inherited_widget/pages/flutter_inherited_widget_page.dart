@@ -1,9 +1,13 @@
 // flutter
 import 'package:flutter/material.dart';
 
+// inherited widget
+import 'package:flutter_state_managment/samples/flutter_inherited_widget/inherited_widget/counter_inherited_widget.dart';
+
 // components
 import 'package:flutter_state_managment/shared/widgets/sample_page.dart';
-import 'package:flutter_state_managment/samples/flutter_inherited_widget/inherited_widget/counter_inherited_widget.dart';
+
+// pages
 import 'package:flutter_state_managment/samples/flutter_inherited_widget/pages/flutter_inherited_widget_twin_page.dart';
 
 class FlutterInheritedWidgetPage extends StatelessWidget {

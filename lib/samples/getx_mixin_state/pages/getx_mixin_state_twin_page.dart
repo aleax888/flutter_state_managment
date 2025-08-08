@@ -1,12 +1,12 @@
 // flutter
 import 'package:flutter/material.dart';
 
-// components
-import 'package:flutter_state_managment/shared/widgets/twin_page.dart';
-
 // GetX
 import 'package:get/get.dart';
 import 'package:flutter_state_managment/samples/getx_mixin_state/counter_controller/counter_controller.dart';
+
+// components
+import 'package:flutter_state_managment/shared/widgets/twin_page.dart';
 
 class GetXMixinStateTwinPage extends StatelessWidget {
   final String title;

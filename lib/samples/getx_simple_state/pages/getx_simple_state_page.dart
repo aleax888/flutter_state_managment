@@ -7,6 +7,8 @@ import 'package:flutter_state_managment/samples/getx_simple_state/counter_contro
 
 // components
 import 'package:flutter_state_managment/shared/widgets/sample_page.dart';
+
+// pages
 import 'package:flutter_state_managment/samples/getx_simple_state/pages/getx_simple_state_twin_page.dart';
 
 class GetXSimpleStatePage extends StatefulWidget {

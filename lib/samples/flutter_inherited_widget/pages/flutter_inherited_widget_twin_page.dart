@@ -1,8 +1,9 @@
 // flutter
 import 'package:flutter/material.dart';
 
-// coutner inherited widget
+// inherited widget
 import 'package:flutter_state_managment/samples/flutter_inherited_widget/inherited_widget/counter_inherited_widget.dart';
+
 // components
 import 'package:flutter_state_managment/shared/widgets/twin_page.dart';
 

@@ -1,6 +1,5 @@
 // flutter
 import 'package:flutter/material.dart';
-import 'package:flutter_state_managment/samples/provider/pages/provider_twin_page.dart';
 
 // provider
 import 'package:provider/provider.dart';
@@ -8,6 +7,9 @@ import 'package:flutter_state_managment/samples/provider/counter_provider/counte
 
 // components
 import 'package:flutter_state_managment/shared/widgets/sample_page.dart';
+
+// pages
+import 'package:flutter_state_managment/samples/provider/pages/provider_twin_page.dart';
 
 class ProviderPage extends StatelessWidget {
   final String title = "Provider Change Notifier";

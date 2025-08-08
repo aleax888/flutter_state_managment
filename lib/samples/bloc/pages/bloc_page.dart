@@ -3,11 +3,13 @@ import 'package:flutter/material.dart';
 
 // BLoC
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_state_managment/samples/bloc/pages/bloc_twin_page.dart';
 import 'package:flutter_state_managment/samples/bloc/counter_bloc/counter_bloc.dart';
 
 // components
 import 'package:flutter_state_managment/shared/widgets/sample_page.dart';
+
+// pages
+import 'package:flutter_state_managment/samples/bloc/pages/bloc_twin_page.dart';
 
 class BlocPage extends StatelessWidget {
   final String title = "BLoC";

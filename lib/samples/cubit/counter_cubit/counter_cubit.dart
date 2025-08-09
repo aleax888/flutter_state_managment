@@ -9,6 +9,7 @@ class CounterCubit extends Cubit<CounterState> {
   CounterCubit() : super(CounterInitial());
 
   late int _counter;
+  int get counter => _counter;
 
   void counterStarted() {
     _counter = 0;
@@ -22,6 +23,6 @@ class CounterCubit extends Cubit<CounterState> {
 
   void decrement() {
     _counter--;
-    emit(CounterLoadSuccess(counter: _counter - 1));
+    emit(CounterLoadSuccess(counter: _counter));
   }
 }

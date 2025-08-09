@@ -26,7 +26,9 @@ class _GetXReactiveStatePageState extends State<GetXReactiveStatePage> {
   @override
   void initState() {
     super.initState();
-    _counterController = Get.put<CounterController>(CounterController());
+    _counterController = Get.put<CounterController>(
+      CounterController()..counterStarted(),
+    );
   }
 
   @override
@@ -40,7 +42,8 @@ class _GetXReactiveStatePageState extends State<GetXReactiveStatePage> {
     return SamplePage(
       title: _title,
       counter: GetX<CounterController>(
-        builder: (counterController) => CounterText(counter: counterController.counter.value),
+        builder: (counterController) =>
+            CounterText(counter: counterController.counter),
       ),
       goToTwinPage: () => Navigator.push(
         context,

@@ -149,7 +149,7 @@ class HomePage extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                     builder: (context) => ChangeNotifierProvider(
-                      create: (_) => CounterProvider(),
+                      create: (_) => CounterProvider()..counterStarted(),
                       child: ProviderPage(),
                     ),
                   ),

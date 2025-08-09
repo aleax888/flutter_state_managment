@@ -6,6 +6,7 @@ class CounterNotifier extends Notifier<int> {
   int build() => 0;
 
   void increment() => state++;
+
   void decrement() => state--;
 }
 

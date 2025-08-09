@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 
 class CounterController extends GetxController with StateMixin<int> {
   late int _counter;
+  int get counter => _counter;
 
   void counterStarted() {
     _counter = 0;

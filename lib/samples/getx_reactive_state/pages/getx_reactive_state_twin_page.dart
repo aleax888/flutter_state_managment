@@ -19,7 +19,8 @@ class GetXReactiveStateTwinPage extends StatelessWidget {
     return TwinPage(
       title: title,
       counter: GetX<CounterController>(
-        builder: (counterController) => CounterText(counter: counterController.counter.value),
+        builder: (counterController) =>
+            CounterText(counter: counterController.counter),
       ),
       increment: _counterController.increment,
       decrement: _counterController.decrement,

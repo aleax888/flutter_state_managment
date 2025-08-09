@@ -14,6 +14,9 @@ import 'package:flutter_state_managment/samples/provider/counter_provider/counte
 import 'package:flutter_state_managment/shared/widgets/custom_page.dart';
 import 'package:flutter_state_managment/shared/widgets/custom_button.dart';
 
+// styles
+import 'package:flutter_state_managment/shared/styles/spacing_style.dart';
+
 // pages
 import 'package:flutter_state_managment/samples/bloc/pages/bloc_page.dart';
 import 'package:flutter_state_managment/samples/cubit/pages/cubit_page.dart';
@@ -33,142 +36,150 @@ class HomePage extends StatelessWidget {
     return CustomPage(
       title: "Flutter State Managment",
       children: [
-        Wrap(
-          children: [
-            // BLoC
-            CustomButton(
-              label: 'BLoC',
-              color: Colors.blue,
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => BlocProvider(
-                      create: (context) => CounterBloc()..add(CounterStarted()),
-                      child: BlocPage(),
+        ConstrainedBox(
+          constraints: BoxConstraints(maxWidth: 500),
+          child: Wrap(
+            spacing: SpacingStyle.md,
+            runSpacing: SpacingStyle.sm,
+            children: [
+              // BLoC
+              CustomButton(
+                label: 'BLoC',
+                color: Colors.blue,
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => BlocProvider(
+                        create: (context) =>
+                            CounterBloc()..add(CounterStarted()),
+                        child: BlocPage(),
+                      ),
                     ),
-                  ),
-                );
-              },
-            ),
+                  );
+                },
+              ),
 
-            // Cubit
-            CustomButton(
-              label: 'Cubit',
-              color: Colors.blue,
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => BlocProvider(
-                      create: (context) => CounterCubit()..counterStarted(),
-                      child: CubitPage(),
+              // Cubit
+              CustomButton(
+                label: 'Cubit',
+                color: Colors.blue,
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => BlocProvider(
+                        create: (context) => CounterCubit()..counterStarted(),
+                        child: CubitPage(),
+                      ),
                     ),
-                  ),
-                );
-              },
-            ),
+                  );
+                },
+              ),
 
-            // Get X Reactive State
-            CustomButton(
-              label: 'GetX Reactive State',
-              color: Colors.blue,
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => GetXReactiveStatePage(),
-                  ),
-                );
-              },
-            ),
-
-            // Get X Simple State
-            CustomButton(
-              label: 'GetX Simple State',
-              color: Colors.blue,
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => GetXSimpleStatePage(),
-                  ),
-                );
-              },
-            ),
-
-            // Get X Mixin State
-            CustomButton(
-              label: 'GetX Mixin State',
-              color: Colors.blue,
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => GetXMixinStatePage()),
-                );
-              },
-            ),
-
-            // Flutter Set State
-            CustomButton(
-              label: 'Fluttter Set State',
-              color: Colors.blue,
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => BlocProvider(
-                      create: (context) => CounterCubit()..counterStarted(),
-                      child: FlutterSetStatePage(),
+              // Get X Reactive State
+              CustomButton(
+                label: 'GetX Reactive State',
+                color: Colors.blue,
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => GetXReactiveStatePage(),
                     ),
-                  ),
-                );
-              },
-            ),
+                  );
+                },
+              ),
 
-            // Flutter Inherited Widget
-            CustomButton(
-              label: 'Fluttter Inherited Widget',
-              color: Colors.blue,
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => FlutterInheritedWidgetPage(),
-                  ),
-                );
-              },
-            ),
-
-            // Provider
-            CustomButton(
-              label: 'Provider',
-              color: Colors.blue,
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => ChangeNotifierProvider(
-                      create: (_) => CounterProvider()..counterStarted(),
-                      child: ProviderPage(),
+              // Get X Simple State
+              CustomButton(
+                label: 'GetX Simple State',
+                color: Colors.blue,
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => GetXSimpleStatePage(),
                     ),
-                  ),
-                );
-              },
-            ),
+                  );
+                },
+              ),
 
-            // Riverpod
-            CustomButton(
-              label: 'Riverpod',
-              color: Colors.blue,
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => RiverpodPage()),
-                );
-              },
-            ),
-          ],
+              // Get X Mixin State
+              CustomButton(
+                label: 'GetX Mixin State',
+                color: Colors.blue,
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => GetXMixinStatePage(),
+                    ),
+                  );
+                },
+              ),
+
+              // Flutter Set State
+              CustomButton(
+                label: 'Fluttter Set State',
+                color: Colors.blue,
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => BlocProvider(
+                        create: (context) => CounterCubit()..counterStarted(),
+                        child: FlutterSetStatePage(),
+                      ),
+                    ),
+                  );
+                },
+              ),
+
+              // Flutter Inherited Widget
+              CustomButton(
+                label: 'Fluttter Inherited Widget',
+                color: Colors.blue,
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => FlutterInheritedWidgetPage(),
+                    ),
+                  );
+                },
+              ),
+
+              // Provider
+              CustomButton(
+                label: 'Provider',
+                color: Colors.blue,
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => ChangeNotifierProvider(
+                        create: (_) => CounterProvider()..counterStarted(),
+                        child: ProviderPage(),
+                      ),
+                    ),
+                  );
+                },
+              ),
+
+              // Riverpod
+              CustomButton(
+                label: 'Riverpod',
+                color: Colors.blue,
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => RiverpodPage()),
+                  );
+                },
+              ),
+            ],
+          ),
         ),
       ],
     );

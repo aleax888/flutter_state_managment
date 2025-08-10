@@ -1,21 +1,29 @@
 # Flutter State Managment
 
 This project contains examples of how to implement state management in Flutter using different ways.
-- **BLoC**: A predictable state management library based on streams and events.
-- **Cubit**: A lightweight version of BLoC with less boilerplate.
-- **GetX**: A micro-framework that simplifies state, navigation, and dependency injection.
-- **Provider**: A recommended, lightweight wrapper around InheritedWidgets.
-- **Riverpod**: A more robust and flexible alternative to Provider.
-- **Flutter (Native)**: Using only `setState` and basic Flutter mechanisms.
+- **BLoC**
+- **Cubit**
+- **GetX Reactive State**
+- **GetX Simple State**
+- **GetX Mixin State**
+- **Flutter (setState)**
+- **Flutter (InheritedWidget)**
+- **Provider**
+- **Riverpod**
 
 
 ---
 
 ### Folders Structure
 ```text
-📁 lib/sample/     -> Code examples for each state management approach.
-🪲 lib/components/ -> Shared widgets used across multiple samples.
-🚪 lib/home/       -> Main app entry point and navigation logic.
+├──📁 lib/samples/ -> Code examples for each state management approach.
+│       └── 📁 sample/
+│               ├── 📁 manapment/ -> Logic layer.
+│               └── 📁 pages/     -> Presentation layer.
+├──📁 lib/shared/        
+│       ├── 📁 styles/  -> Shared style values like colors, sizes, etc.
+│       └── 📁 widgets/ -> Shared widgets used across every sample.
+└──🚪 lib/home/         -> Main app entry point and navigation logic.
 ```
 
 ---

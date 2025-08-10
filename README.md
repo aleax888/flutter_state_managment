@@ -1,6 +1,7 @@
 # Flutter State Managment
 
 This project contains examples of how to implement state management in Flutter using different ways.
+
 The examples are about how to implement Flutter’s counter app example, where there are two pages that read the state to manipulate the counter value and display it.
 
 

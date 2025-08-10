@@ -21,9 +21,9 @@ The examples are about how to implement Flutter’s counter app example, where t
 ### Folders Structure
 ```text
 ├──📁 lib/samples/ -> Code examples for each state management approach.
-│       └── 📁 sample/
-│               ├── 📁 manapment/ -> Logic layer.
-│               └── 📁 pages/     -> Presentation layer.
+│          └── 📁 sample/
+│                  ├── 📁 manapment/ -> Logic layer.
+│                  └── 📁 pages/     -> Presentation layer.
 ├──📁 lib/shared/        
 │       ├── 📁 styles/  -> Shared style values like colors, sizes, etc.
 │       └── 📁 widgets/ -> Shared widgets used across every sample.

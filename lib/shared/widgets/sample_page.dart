@@ -1,6 +1,9 @@
 // fluttter
 import 'package:flutter/material.dart';
 
+// style
+import 'package:flutter_state_managment/shared/styles/spacing_style.dart';
+
 // components
 import 'package:flutter_state_managment/shared/widgets/action_button.dart';
 import 'package:flutter_state_managment/shared/widgets/custom_button.dart';
@@ -27,6 +30,7 @@ class SamplePage extends StatelessWidget {
       title: title,
       floatingActionButton: Column(
         mainAxisSize: MainAxisSize.min,
+        spacing: SpacingStyle.sm,
         children: [
           // increment
           ActionButton(action: increment, icon: Icons.add),
@@ -40,11 +44,7 @@ class SamplePage extends StatelessWidget {
         counter,
 
         // go to twin page
-        CustomButton(
-          label: "Go to Twin",
-          color: Colors.green,
-          onPressed: goToTwinPage,
-        ),
+        CustomButton(label: "Go to Twin", onPressed: goToTwinPage),
       ],
     );
   }

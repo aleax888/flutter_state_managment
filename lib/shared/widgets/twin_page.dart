@@ -1,6 +1,9 @@
 // fluttter
 import 'package:flutter/material.dart';
 
+// styles
+import 'package:flutter_state_managment/shared/styles/spacing_style.dart';
+
 // components
 import 'package:flutter_state_managment/shared/widgets/action_button.dart';
 import 'package:flutter_state_managment/shared/widgets/custom_page.dart';
@@ -23,6 +26,7 @@ class TwinPage extends StatelessWidget {
     return CustomPage(
       title: "$title (Twin)",
       floatingActionButton: Column(
+        spacing: SpacingStyle.sm,
         mainAxisSize: MainAxisSize.min,
         children: [
           // increment

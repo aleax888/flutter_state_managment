@@ -2,8 +2,8 @@
 import 'package:flutter/material.dart';
 
 // inherited notifier
-import 'package:flutter_state_managment/samples/flutter_inherited_widget/inherited_widget/counter_notifier.dart';
-import 'package:flutter_state_managment/samples/flutter_inherited_widget/inherited_widget/counter_inherited_widget.dart';
+import 'package:flutter_state_managment/samples/flutter_inherited_notifier/inherited_notifier/counter_notifier.dart';
+import 'package:flutter_state_managment/samples/flutter_inherited_notifier/inherited_notifier/counter_inherited_notifier.dart';
 
 // riveerpod
 import 'package:flutter_riverpod/flutter_riverpod.dart';

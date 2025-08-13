@@ -5,8 +5,8 @@ class CounterProvider with ChangeNotifier {
   late int _counter;
   int get counter => _counter;
 
-  void counterStarted() {
-    _counter = 0;
+  void counterStarted({int? counter}) {
+    _counter = counter ?? 0;
     notifyListeners();
   }
 

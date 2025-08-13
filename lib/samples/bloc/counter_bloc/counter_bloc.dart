@@ -17,7 +17,7 @@ class CounterBloc extends Bloc<CounterEvent, CounterState> {
   int get counter => _counter;
 
   void _onStarted(CounterStarted event, Emitter<CounterState> emit) {
-    _counter = 0;
+    _counter = event.counter ?? 0;
     emit(CounterLoadSuccess(counter: _counter));
   }
 

@@ -2,7 +2,7 @@
 import 'package:flutter/material.dart';
 
 // counter notifier
-import 'package:flutter_state_managment/samples/flutter_inherited_widget/inherited_widget/counter_notifier.dart';
+import 'package:flutter_state_managment/samples/flutter_inherited_notifier/inherited_notifier/counter_notifier.dart';
 
 class CounterInheritedNotifier extends InheritedNotifier<CounterNotifier> {
   const CounterInheritedNotifier({

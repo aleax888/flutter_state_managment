@@ -5,8 +5,8 @@ class CounterController extends GetxController with StateMixin<int> {
   late int _counter;
   int get counter => _counter;
 
-  void counterStarted() {
-    _counter = 0;
+  void counterStarted({int? counter}) {
+    _counter = counter ?? 0;
     change(_counter, status: RxStatus.success());
   }
 

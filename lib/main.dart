@@ -1,8 +1,9 @@
 // flutter
 import 'package:flutter/material.dart';
 
-// inherited widget
-import 'package:flutter_state_managment/samples/flutter_inherited_widget/inherited_widget/counter_state_container.dart';
+// inherited notifier
+import 'package:flutter_state_managment/samples/flutter_inherited_widget/inherited_widget/counter_notifier.dart';
+import 'package:flutter_state_managment/samples/flutter_inherited_widget/inherited_widget/counter_inherited_widget.dart';
 
 // riveerpod
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -19,7 +20,8 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return CounterStateContainer(
+    return CounterInheritedNotifier(
+      notifier: CounterNotifier()..counterStarted(),
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
         title: 'Flutter State Managment',
@@ -28,4 +30,3 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-

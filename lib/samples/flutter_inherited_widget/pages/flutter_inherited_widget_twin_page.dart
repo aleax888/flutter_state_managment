@@ -1,7 +1,7 @@
 // flutter
 import 'package:flutter/material.dart';
 
-// inherited widget
+// inherited notifier
 import 'package:flutter_state_managment/samples/flutter_inherited_widget/inherited_widget/counter_inherited_widget.dart';
 
 // components
@@ -16,9 +16,9 @@ class FlutterInheritedWidgetTwinPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return TwinPage(
       title: title,
-      counter: CounterText(counter: CounterInheritedWidget.of(context).counter),
-      increment: CounterInheritedWidget.of(context).increment,
-      decrement: CounterInheritedWidget.of(context).decrement,
+      counter: CounterText(counter: CounterInheritedNotifier.of(context).counter),
+      increment: CounterInheritedNotifier.of(context).increment,
+      decrement: CounterInheritedNotifier.of(context).decrement,
     );
   }
 }

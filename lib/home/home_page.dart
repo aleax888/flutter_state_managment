@@ -138,9 +138,9 @@ class HomePage extends StatelessWidget {
               },
             ),
 
-            // Flutter Inherited Widget -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+            // Flutter Inherited Notifier -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
             CustomButton(
-              label: 'Fluttter Inherited Widget',
+              label: 'Fluttter Inherited Notifier',
               bgColor: Color(0xFF29B6F6),
               textColor: TextColorStyle.primary,
               onPressed: () {

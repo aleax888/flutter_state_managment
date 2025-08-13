@@ -1,29 +1,27 @@
 // flutter
 import 'package:flutter/material.dart';
 
-class CounterInheritedWidget extends InheritedWidget {
-  final int counter;
-  final VoidCallback increment;
-  final VoidCallback decrement;
-  const CounterInheritedWidget({
+// counter notifier
+import 'package:flutter_state_managment/samples/flutter_inherited_widget/inherited_widget/counter_notifier.dart';
+
+class CounterInheritedNotifier extends InheritedNotifier<CounterNotifier> {
+  const CounterInheritedNotifier({
     super.key,
+    required super.notifier,
     required super.child,
-    required this.counter,
-    required this.increment,
-    required this.decrement,
   });
 
-  static CounterInheritedWidget? maybeOf(BuildContext context) {
-    return context.dependOnInheritedWidgetOfExactType<CounterInheritedWidget>();
+  static CounterInheritedNotifier? maybeOf(BuildContext context) {
+    return context
+        .dependOnInheritedWidgetOfExactType<CounterInheritedNotifier>();
   }
 
-  static CounterInheritedWidget of(BuildContext context) {
-    final CounterInheritedWidget? result = maybeOf(context);
-    assert(result != null, 'No Counter found in context');
-    return result!;
+  static CounterNotifier of(BuildContext context) {
+    final CounterInheritedNotifier? result = maybeOf(context);
+    assert(
+      result != null && result.notifier != null,
+      'No Counter found in context',
+    );
+    return result!.notifier!;
   }
-
-  @override
-  bool updateShouldNotify(CounterInheritedWidget oldWidget) =>
-      counter != oldWidget.counter;
 }

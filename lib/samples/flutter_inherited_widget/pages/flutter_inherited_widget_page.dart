@@ -1,7 +1,7 @@
 // flutter
 import 'package:flutter/material.dart';
 
-// inherited widget
+// inherited notifier
 import 'package:flutter_state_managment/samples/flutter_inherited_widget/inherited_widget/counter_inherited_widget.dart';
 
 // components
@@ -12,14 +12,14 @@ import 'package:flutter_state_managment/shared/widgets/counter_text.dart';
 import 'package:flutter_state_managment/samples/flutter_inherited_widget/pages/flutter_inherited_widget_twin_page.dart';
 
 class FlutterInheritedWidgetPage extends StatelessWidget {
-  final String title = "Flutter Inherited Widget";
+  final String title = "Flutter Inherited Notifier";
   const FlutterInheritedWidgetPage({super.key});
 
   @override
   Widget build(BuildContext context) {
     return SamplePage(
       title: title,
-      counter: CounterText(counter: CounterInheritedWidget.of(context).counter),
+      counter: CounterText(counter: CounterInheritedNotifier.of(context).counter),
       goToTwinPage: () {
         Navigator.push(
           context,
@@ -28,8 +28,8 @@ class FlutterInheritedWidgetPage extends StatelessWidget {
           ),
         );
       },
-      increment: CounterInheritedWidget.of(context).increment,
-      decrement: CounterInheritedWidget.of(context).decrement,
+      increment: CounterInheritedNotifier.of(context).increment,
+      decrement: CounterInheritedNotifier.of(context).decrement,
     );
   }
 }
